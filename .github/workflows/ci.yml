@@ -9,6 +9,29 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+name: CI for Food Order App
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+
+      - name: Jalankan test login
+        run: |
 
     steps:
       - name: Checkout repository
