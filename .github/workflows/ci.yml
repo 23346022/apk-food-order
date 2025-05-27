@@ -19,6 +19,10 @@ jobs:
         with:
           php-version: '8.1'
 
-      - name: Run test
+      - name: Jalankan test login
         run: |
           php tests/test-login.php
+
+      - name: Jalankan test create menu
+        run: |
+          php tests/test-create-menu.php
